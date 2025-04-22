@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+
+        {{fecha.concurso.nombre}}
+        Nro: {{fecha.nro}}
+        Apertura apuestas: {{fecha.apertura}}
+        Cierre apuestas:{{fecha.cierre}}
+<p>
+    <a href="{% url 'nuevo_prode' %}">Nuevo PRODE</a>
+</p>
+
+{% endblock %}
+
+

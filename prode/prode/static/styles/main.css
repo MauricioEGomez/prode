@@ -1,0 +1,36 @@
+body {
+    background: black;
+    color: whitesmoke
+}
+
+.navbar {   
+    background: #404040;
+    padding: 5px 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+}
+.navbar ul li  {
+    list-style: none;
+}
+.navbar ul li a {
+    color:white;
+    text-decoration: none;
+}
+.navbar ul li a:hover { /* cuando el mouse pasa por arriba del texto (vínculo) */
+    color:aquamarine;
+}
+
+.container  {
+    max-width: 1200px;
+    /* margin: auto; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.ficha ul li p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: aquamarine;
+}

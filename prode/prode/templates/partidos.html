@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Partidos</h1>
+{% for partido in partidos %}
+<ul class="ficha">
+    <li>
+        <p> Fecha: {{partido.fecha}}</p>
+        <p> Resultado final: {% if partido.finalizado == True %} ✅ {% else %} ❌ {% endif %}</p>
+        <p> Local: {{partido.equipo1.equipo.nombre}}</p>
+        <p> {% if partido.resultadoEquipo1 is not none %} {{partido.resultadoEquipo1}} {% else %} _ {% endif %} </p>
+        <p> {% if partido.resultadoEquipo2 is not none %} {{partido.resultadoEquipo2}} {% else %} _ {% endif %} </p>
+        <p> Visitante: {{partido.equipo2.equipo.nombre}}</p>
+        <a href="http://localhost:8000/prodes/fechas/partido/{{partido.id}}/">Modificar</a>
+        
+    </li>
+</ul>
+{% endfor %}
+
+{% endblock %}
+

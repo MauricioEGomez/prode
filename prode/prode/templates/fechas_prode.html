@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Fechas del {{nombre_prode}}</h1>
+
+
+{% for fecha in fechas %}
+<ul>
+    <li>
+        <a href="http://localhost:8000/prodes/fechas/partidos/{{fecha.id}}"/>
+        Nro: {{fecha.nro}}
+        Apertura apuesta: {{fecha.apertura}}
+        Cierre apuesta:{{fecha.cierre}} </a>
+    </li>
+</ul>
+{% endfor %}
+<p>
+    <a href="{% url 'nueva_fecha' %}">Agregar Fecha</a>
+</p>
+
+{% endblock %}
+

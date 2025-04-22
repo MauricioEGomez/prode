@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{% url 'nuevo_pronostico' %}" method="POST">
+
+    {% csrf_token %}
+    {{ form.as_p}}
+
+    <button>
+        Guardar
+    </button>
+
+</form>
+{{ error }}
+{% endblock %}
+

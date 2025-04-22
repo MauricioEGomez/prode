@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Partido {{partido.id}}</h1>
+
+
+<form action="http://localhost:8000/prodes/fechas/partido/{{partido.id}}/" method="POST">
+
+    {% csrf_token %}
+    
+    {{ form.as_p}}
+
+    <button>
+        Guardar
+    </button>
+
+</form>
+{{ error }}
+
+{% endblock %}
+

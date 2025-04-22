@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Nuevo Equipo</h1>
+
+
+    <form action="{% url 'nuevo_participante' %}" method="POST">
+
+        {% csrf_token %}
+        {{ form.as_p}}
+
+        <button>
+            Guardar
+        </button>
+
+    </form>
+    {{ error }}
+        
+{% endblock %}
+

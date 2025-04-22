@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Seleccione el Equipo</h1>
+
+{% for participante in participantes %}
+<ul>
+    <li>
+       <p> Organización: {{participante.concursoOrganizacion.organizacion.nombre}}</p>
+       <p> PRODE: {{participante.concursoOrganizacion.concurso.nombre}}</p>
+       <p> Nombre del equipo: {{participante.nombre}}</p>       
+       <p> Puntos obtenidos: {{participante.puntosObtenidos}}</p>
+    </li>
+</ul>
+{% endfor %}
+<p>
+    <a href="{% url 'nuevo_participante' %}">Nuevo Equipo</a>
+</p>
+
+{% endblock %}
+
